@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Dongle;
+  src: url("./../assets/font/Dongle-Regular.ttf");
+}
+
+@font-face {
+  font-family: Zen Kaku Gothic Antique;
+  src: url("./../assets/font/ZenKakuGothicAntique-Regular.ttf");
+}
+
+h1,
+h2 {
+  font-family: Dongle-Regular;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 15px;
+}
+
+h3,
+p {
+  font-family: "Zen Kaku Gothic Antique";
+}

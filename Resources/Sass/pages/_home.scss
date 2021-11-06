@@ -1,0 +1,87 @@
+.container__home {
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 7.5em;
+
+  @include laptop {
+    padding-bottom: 0em;
+    margin-left: 5em;
+  }
+
+  .background {
+    background-image: url(./../assets/Images/food.jpg);
+    width: 100%;
+    height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -99;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 150px;
+      display: flex;
+      background-color: $white;
+      position: relative;
+      bottom: -70%;
+      border-radius: 100% 100% 0 0;
+      z-index: -98;
+    }
+
+    @include laptop {
+      height: 500px;
+    }
+  }
+
+  .home__elements {
+    margin-top: -10%;
+    padding: 0 1em;
+
+    @include tablet {
+      margin-top: -5%;
+      padding: 0 2.5em;
+    }
+    @include laptop {
+      margin-top: -5%;
+      padding-bottom: 2.5em;
+    }
+
+    &__title {
+      text-align: center;
+
+      @include tablet {
+        font-size: 60px;
+      }
+      @include laptop {
+        font-size: 75px;
+      }
+    }
+
+    &__description {
+      padding-top: 5%;
+      text-align: justify;
+      @include tablet {
+        font-size: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      @include laptop {
+        font-size: 30px;
+      }
+    }
+
+    &__subtitle {
+      padding-top: 5%;
+      text-align: left;
+      padding-left: 5%;
+      @include tablet {
+        font-size: 30px;
+      }
+
+      @include laptop {
+        font-size: 45px;
+      }
+    }
+  }
+}
