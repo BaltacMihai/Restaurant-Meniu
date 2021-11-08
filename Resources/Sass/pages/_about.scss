@@ -1,0 +1,49 @@
+.container__about {
+  @include laptop {
+    margin-left: 5vw;
+  }
+  .row {
+    align-items: center;
+    .title {
+      font-size: 35px;
+      @include tablet {
+        font-size: 50px;
+        margin: 0 auto;
+      }
+      &__image {
+        width: 150px;
+
+        @include tablet {
+          width: 200px;
+        }
+      }
+    }
+  }
+  .about__text {
+    padding: 1em;
+    margin-bottom: 30%;
+
+    font-size: 20px;
+    text-align: justify;
+
+    @include tablet {
+      font-size: 30px;
+      margin-bottom: 10%;
+    }
+  }
+
+  .about__audio {
+    position: fixed;
+    right: 0;
+    top: 5%;
+    width: 50px;
+    height: 50px;
+    padding: 3%;
+    background-color: $orange;
+    border-radius: 100% 0 0 100%;
+
+    @include laptop {
+      padding: 1%;
+    }
+  }
+}

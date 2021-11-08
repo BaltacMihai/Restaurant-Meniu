@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toro Toro</title>
     <link rel="stylesheet" href="./Resources/Sass/main.css">
+    <link rel="icon" href="./Resources/assets/Icon/logo.png">
+    <script src="./Resources/script/filterSubmeniu.js"></script>
+
 </head>
 
 <body>
@@ -26,7 +29,468 @@
 
             <h2 class="title">Meniu</h2>
         </div>
+        <div class="row submeniu">
+            <div class="submeniu__element submeniu__element--active" id="pizza" onclick="filter(pizza)">
+                <img src="./Resources/assets/Icon/pizza.svg" alt="Pizza Icon" class="submeniu__element__image ">
+                <p class="submeniu__element__title">Pizza</p>
+            </div>
+            <div class="submeniu__element" id="pasta" onclick="filter(pasta)">
+                <img src="./Resources/assets/Icon/spaghetti.svg" alt="Pasta Icon" class="submeniu__element__image">
+                <p class="submeniu__element__title">Pasta</p>
+            </div>
+            <div class="submeniu__element" id="hamburger" onclick="filter(hamburger)">
+                <img src="./Resources/assets/Icon/double.svg" alt="Hamburger Icon" class="submeniu__element__image">
+                <p class="submeniu__element__title">Hamburger</p>
+            </div>
+            <div class="submeniu__element" id="dessert" onclick="filter(dessert)">
+                <img src="./Resources/assets/Icon/icecream.svg" alt="Dessert Icon" class="submeniu__element__image">
+                <p class="submeniu__element__title">Dessert</p>
+            </div>
+            <div class="submeniu__element" id="drink" onclick="filter(drink)">
+                <img src="./Resources/assets/Icon/drink.svg" alt="Drink Icon" class="submeniu__element__image">
+                <p class="submeniu__element__title">Drink</p>
+            </div>
+        </div>
 
+
+
+        <div class="food__elements">
+            <div id="food-pizza">
+
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pizza1.png" alt="Pizza Royale Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Pizza Royale</figcaption>
+                            <p class="card__subtitle important">Ham, Salami, Olive</p>
+                            <h4 class="card__details">Price: <span class="important">22.5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pizza2.png" alt="Pizza margherita Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Pizza Margherita</figcaption>
+                            <p class="card__subtitle important">Different types of Cheese, Tomatoes</p>
+                            <h4 class="card__details">Price: <span class="important">17lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pizza3.png" alt="Pizza Tonno Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Pizza di Tonno</figcaption>
+                            <p class="card__subtitle important">Tonno, Onion, Tomatoes</p>
+                            <h4 class="card__details">Price: <span class="important">20lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pizza4.png" alt="Pizza Prosciutto Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Pizza Prosciutto</figcaption>
+                            <p class="card__subtitle important">Salami, Cheese, Tomatoes </p>
+                            <h4 class="card__details">Price: <span class="important">17lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+            </div>
+            <div id="food-pasta" style="display: none;">
+                <figure class="card card__food">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pasta1.png" alt="Bucatini Pasta Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Bucatini Pasta</figcaption>
+                            <p class="card__subtitle important">Bucatini, Pancetta, Red Peper</p>
+                            <h4 class="card__details">Price: <span class="important">23lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pasta2.png" alt="Spinach Pasta Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Spinach Pasta</figcaption>
+                            <p class="card__subtitle important">Spinach, Onion, Garlic</p>
+                            <h4 class="card__details">Price: <span class="important">22.5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pasta3.png" alt="Pizza Tonno Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Pasta Rigatoni</figcaption>
+                            <p class="card__subtitle important">Rigatoni, Onion, Tomatoes</p>
+                            <h4 class="card__details">Price: <span class="important">20lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pasta5.png" alt="Fajita Photo" class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Fajita Pasta</figcaption>
+                            <p class="card__subtitle important">Tomatoes, Oregano,Smoked Paprika</p>
+                            <h4 class="card__details">Price: <span class="important">20lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/pasta6.png" alt="Spaghetti carbonara Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Spaghetti carbonara</figcaption>
+                            <p class="card__subtitle important">Ham, Pecorino Cheese, Parmesan</p>
+                            <h4 class="card__details">Price: <span class="important">25lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+            </div>
+            <div id="food-hamburger" style="display: none;">
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/hamburger1.png" alt="Beef Hamburger Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Meniu Beef Hamburger </figcaption>
+                            <p class="card__subtitle important">Beef, Potatoes, Tomatoes</p>
+                            <h4 class="card__details">Price: <span class="important">40lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/hamburger2.png" alt="Hamburger Chicken Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Chicken Hamburger </figcaption>
+                            <p class="card__subtitle important">Chicken, Pickles, Tomatoes</p>
+                            <h4 class="card__details">Price: <span class="important">21lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/hamburger3.png" alt="Beef Hamburger Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Beef Hamburger</figcaption>
+                            <p class="card__subtitle important">Beef, Salad, Tomatoes</p>
+                            <h4 class="card__details">Price: <span class="important">22.5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/hamburger4.png" alt="Cheesy Hamburger Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Cheesy Hamburger</figcaption>
+                            <p class="card__subtitle important">Cheesy, Beef, Ham</p>
+                            <h4 class="card__details">Price: <span class="important">22.5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/hamburger5.png" alt="Egg Hamburger Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Egg Hamburger</figcaption>
+                            <p class="card__subtitle important">Beef, Pickles, Egg</p>
+                            <h4 class="card__details">Price: <span class="important">22.5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+            </div>
+            <div id="food-dessert" style="display: none;">
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/dessert1.png" alt="Pizza Tonno Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Chery cake</figcaption>
+                            <p class="card__subtitle important">Pudding,Cocoa, Chery</p>
+                            <h4 class="card__details">Price: <span class="important">20lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/dessert2.png" alt="Pizza Tonno Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Chocolate mousse</figcaption>
+                            <p class="card__subtitle important">Chocolate, Whipping cream, sugar</p>
+                            <h4 class="card__details">Price: <span class="important">15lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/dessert3.png" alt="Pizza Tonno Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Pancakes</figcaption>
+                            <p class="card__subtitle important">Raspberry, Bluebarry, Honey</p>
+                            <h4 class="card__details">Price: <span class="important">12lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/dessert4.png" alt="Pizza Tonno Photo"
+                            class="card__image">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Oreo icecream</figcaption>
+                            <p class="card__subtitle important">Icecream, Oreo, honey </p>
+                            <h4 class="card__details">Price: <span class="important">17.5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+            </div>
+            <div id="food-drink" style="display: none;">
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/drink1.png" alt="Fanta Image"
+                            class="card__image card__image--height">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Fanta</figcaption>
+                            <p class="card__subtitle important">Orange, Grapes, Grapefruit </p>
+                            <h4 class="card__details">Price: <span class="important">5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/drink2.png" alt="CocaCola Image"
+                            class="card__image card__image--height">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Coca-Cola</figcaption>
+                            <p class="card__subtitle important">Classic, Chery, Lime </p>
+                            <h4 class="card__details">Price: <span class="important">5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/drink3.png" alt="Schweppes Image"
+                            class="card__image card__image--height">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Schweppes</figcaption>
+                            <p class="card__subtitle important">Bitter Lemon, Tonic Water, Mandarin </p>
+                            <h4 class="card__details">Price: <span class="important">5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/drink4.png" alt="Heineken Image"
+                            class="card__image card__image--height">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Heineken</figcaption>
+                            <p class="card__subtitle important">Original, Alchool-Free </p>
+                            <h4 class="card__details">Price: <span class="important">7lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/drink5.png" alt="Ursus Image"
+                            class="card__image card__image--height">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Ursus</figcaption>
+                            <p class="card__subtitle important">Blonde,Black Grizzly, Pale Ale Panda </p>
+                            <h4 class="card__details">Price: <span class="important">7lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/drink6.png" alt="Becks Image"
+                            class="card__image card__image--height">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Becks</figcaption>
+                            <p class="card__subtitle important">Classic, Alchool-Free </p>
+                            <h4 class="card__details">Price: <span class="important">7lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+                <figure class="card card__food ">
+                    <div class="row ">
+                        <img src="./Resources/assets/Images/Meniu/drink7.png" alt="Dorna Image"
+                            class="card__image card__image--height">
+                        <div class="column column--justifyContentCenter">
+                            <figcaption class="card__title">Dorna</figcaption>
+                            <p class="card__subtitle important">Still Water, Sparkling Water </p>
+                            <h4 class="card__details">Price: <span class="important">3.5lei</span>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                    <button class="card__button">
+                        <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
+                    </button>
+                </figure>
+            </div>
+        </div>
 
     </div>
 

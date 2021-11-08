@@ -8,6 +8,7 @@
     <title>Toro Toro</title>
     <link rel="stylesheet" href="./Resources/Sass/main.css">
     <link rel="icon" href="./Resources/assets/Icon/logo.png">
+    <script src="./Resources/script/playMusic.js"></script>
 </head>
 
 <body>
@@ -20,8 +21,32 @@
                 class="navbar__logo navbar__logo--active"></a>
         <a href="./contact.html"><img src="./Resources/assets/Icon/phone.svg" class="navbar__logo"></a>
     </div>
-    <div class="container container__home">
+    <div class="container container__about">
+        <div class="row">
+            <img src="./Resources/assets/Images/about.png" alt="Tribe people" class="title__image">
+            <h2 class="title">About us</h2>
+        </div>
+        <p class="about__text"> <span class="important"> The story of the Torotoro tribe</span>
+            <br>
+            Orotoro is the name of an ancient hunting tribe. A tribe from the time when people were hunter-gatherers. It
+            was known among Homo sapiens and Neanderthals as the most skilled at hunting. So clever that they always had
+            enough meat, which is why its members gave up picking fruits and vegetables.
+            <br>
+            It is said that the Tortorians tamed the fire just to cook the meat, deciphering its mysteries so that it
+            would get a crispy crust on the outside, but be juicy on the inside, complemented by the aroma of smoke.
+            Some historians say that Prometheus himself, who brought the fire of the people, was also an Torotorian
+            eager to make known the taste of meat cooked over a charcoal fire, and according to some anthropologists,
+            "Toro-toro" meant in their language "Meat and only meat ”, hence their name.
+        </p>
 
+        <div class="about__audio">
+            <audio src="./Resources/assets/Audio/ancientSong.mp3" loop id="song">
+                Your browser doesn't support audio.
+            </audio>
+            <img src="./Resources/assets/Icon/play.svg" alt="play" id="song-play" onclick="playSong('play')">
+            <img src="./Resources/assets/Icon/pause.svg" alt="pause" id="song-pause" onclick="playSong('pause')"
+                style="display: none;">
+        </div>
     </div>
 
 </body>

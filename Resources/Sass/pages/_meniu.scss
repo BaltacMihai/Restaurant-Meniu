@@ -1,11 +1,15 @@
 .container__meniu {
+  @include laptop {
+    padding-left: 5em;
+  }
+
   .row__title {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 2em;
 
     .title {
-      margin-left: auto;
+      margin-right: auto;
       font-size: 35px;
 
       @include tablet {
@@ -15,6 +19,7 @@
       }
       @include laptop {
         font-size: 55px;
+        padding-left: 0;
       }
 
       &__image {
@@ -23,5 +28,84 @@
         padding-right: 1em;
       }
     }
+  }
+}
+
+.food__elements {
+  margin-bottom: 10em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  .card__food {
+    width: 80vw;
+    margin: 1em;
+
+    @include tablet {
+      width: 30vw;
+      height: 250px;
+    }
+
+    @include laptop {
+      width: 17.5vw;
+      height: 360px;
+    }
+    .card__title {
+      @include laptop {
+        font-size: 30px;
+        width: 16vw;
+      }
+    }
+
+    .card__image {
+      width: 100px;
+      object-fit: contain;
+      @include laptop {
+        width: 200px;
+      }
+
+      &--height {
+        height: 100px;
+        width: auto;
+
+        @include laptop {
+          height: 150px;
+        }
+      }
+    }
+    .row {
+      .column--justifyContentCenter {
+        align-items: center;
+      }
+      @include laptop {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .card__subtitle {
+      font-size: 12px;
+      width: 100px;
+      @include laptop {
+        font-size: 120%;
+        width: 16vw;
+      }
+    }
+    .card__button {
+      display: none;
+      @include laptop {
+        margin-bottom: -8em;
+      }
+    }
+  }
+}
+
+[id*="food-"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include laptop {
+    justify-content: flex-start;
   }
 }

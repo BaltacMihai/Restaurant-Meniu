@@ -1,0 +1,48 @@
+.submeniu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include laptop {
+    justify-content: center;
+  }
+
+  &__element {
+    width: 32vw;
+    height: 50px;
+
+    @include tablet {
+      width: 17.5vw;
+    }
+    @include laptop {
+      width: 10vw;
+      margin-right: 1em;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $orange;
+
+    border-radius: 30px;
+
+    margin-bottom: 1em;
+
+    &__image {
+      width: 28px;
+    }
+
+    &__title {
+      margin-left: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      color: $white;
+    }
+
+    &--active {
+      background-color: #b37e23;
+    }
+  }
+}
