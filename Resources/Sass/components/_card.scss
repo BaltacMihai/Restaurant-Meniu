@@ -46,12 +46,10 @@
 
   .card__details,
   .important {
-    @include tablet {
-      font-size: 15px;
-    }
+    font-size: 12.5px;
 
     @include laptop {
-      font-size: 20px;
+      font-size: 15px;
     }
   }
 
@@ -68,6 +66,9 @@
     border: none;
     margin-right: 0.5em;
     border: none;
+
+    cursor: pointer;
+
     &__logo {
       width: 20px;
 

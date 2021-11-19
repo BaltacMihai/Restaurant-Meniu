@@ -6,13 +6,18 @@
     align-items: center;
     .title {
       font-size: 35px;
+      @include slide-in-left(0s);
       @include tablet {
-        font-size: 50px;
+        font-size: 75px;
         margin: 0 auto;
       }
-      &__image {
-        width: 150px;
 
+      @include laptop {
+        font-size: 90px;
+      }
+      &__image {
+        width: 125px;
+        @include slide-in-left(0.5s);
         @include tablet {
           width: 200px;
         }
@@ -20,14 +25,15 @@
     }
   }
   .about__text {
+    @include slide-in-left(1.5s);
     padding: 1em;
     margin-bottom: 30%;
 
-    font-size: 20px;
+    font-size: 12.5px;
     text-align: justify;
 
     @include tablet {
-      font-size: 30px;
+      font-size: 20px;
       margin-bottom: 10%;
     }
   }
@@ -41,6 +47,7 @@
     padding: 3%;
     background-color: $orange;
     border-radius: 100% 0 0 100%;
+    @include slide-in-right(0.25s);
 
     @include laptop {
       padding: 1%;

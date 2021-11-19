@@ -16,21 +16,23 @@
     .title {
       display: flex;
       align-items: center;
-
+      @include slide-in-left(0s);
       font-size: 35px;
 
       justify-content: space-around;
 
       @include tablet {
-        font-size: 50px;
+        font-size: 75px;
       }
       @include laptop {
         margin: 0 auto;
         padding-left: 10vw;
+        font-size: 90px;
       }
 
       &__image {
         width: 150px;
+        @include slide-in-right(0s);
         @include tablet {
           width: 200px;
         }
@@ -50,7 +52,7 @@
     padding-top: 1em;
     width: 90vw;
     object-fit: contain;
-
+    @include slide-in-left(1s);
     @include tablet {
       width: 75vw;
     }
@@ -67,7 +69,7 @@
   &__info {
     padding-top: 1em;
     padding-bottom: 20%;
-
+    @include slide-in-left(1.5s);
     width: 90vw;
 
     @include tablet {

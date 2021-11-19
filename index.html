@@ -5,20 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A mock-up for a restaurant app">
+    <meta name="keywords" content="Food, Restaurant, Food App">
+    <meta name="author" content="Baltac Mihai">
     <title>Toro Toro</title>
+
     <link rel="stylesheet" href="./Resources/Sass/main.css">
     <link rel="icon" href="./Resources/assets/Icon/logo.png">
+    <script src="./Resources/script/redeemOffers.js"></script>
+
+    <script src="./Resources/script/geoLocation.js"></script>
+    <script src="./Resources/script/createModal.js"></script>
+
 </head>
 
-<body>
+<body onload="getLocation()">
     <div class="navbar">
         <a href="./index.html"><img src="./Resources/assets/Icon/home.svg"
                 class="navbar__logo navbar__logo--active"></a>
-        <a href="./event.html"><img src="./Resources/assets/Icon/event.svg"
-                class="navbar__logo navbar__logo--width"></a>
+        <a href="./event.html"><img src="./Resources/assets/Icon/event.svg" class="navbar__logo "></a>
         <a href="./meniu.html"><img src="./Resources/assets/Icon/food.svg" class="navbar__logo "></a>
         <a href="./about.html"><img src="./Resources/assets/Icon/information-sign.svg" class="navbar__logo "></a>
         <a href="./contact.html"><img src="./Resources/assets/Icon/phone.svg" class="navbar__logo"></a>
+
+
     </div>
     <div class="container container__home">
         <div class="background">
@@ -33,7 +43,10 @@
                 It was known among Homo sapiens and Neanderthals as the most skilled at hunting. So clever that they
                 always
                 had enough meat, which is why its members gave up picking fruits and vegetables.</p>
-            <h2 class="home__elements__subtitle">Offers of the week</h2>
+            <h3 class="home__elements__subtitle">Offers of the week*</h3>
+            <p class="disclaimer"> *You must be in the restaurant to redeem the offers. Just for the test, <span
+                    onclick="redeemTheOffert(true)" class="important">click
+                    here </span> </p>
             <div class="column carousel">
 
                 <figure class="card " id="c1">
@@ -42,13 +55,14 @@
                             class="card__image">
                         <div class="column column--justifyContentCenter">
                             <figcaption class="card__title">Pizza di Tonno</figcaption>
-                            <h4 class="card__details">Price: <span class="important">18lei</span>
+                            <h4 class="card__details">Price: <span class="important oldPrice">20lei</span> <span
+                                    class="important">18lei</span>
                             </h4>
                         </div>
                     </div>
 
 
-                    <button class="card__button">
+                    <button class="card__button offert" onclick="createModala('Pizza di Tonno','18lei')">
                         <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
                     </button>
                 </figure>
@@ -58,13 +72,14 @@
                             class="card__image">
                         <div class="column column--justifyContentCenter">
                             <figcaption class="card__title">Beef Hamburger</figcaption>
-                            <h4 class="card__details">Price: <span class="important">32lei</span>
+                            <h4 class="card__details">Price: <span class="important oldPrice">40lei</span> <span
+                                    class="important">32lei</span>
                             </h4>
                         </div>
                     </div>
 
 
-                    <button class="card__button">
+                    <button class="card__button offert" onclick="createModala('Beef Hamburger','32lei')">
                         <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
                     </button>
                 </figure>
@@ -74,21 +89,33 @@
                             class="card__image">
                         <div class="column column--justifyContentCenter">
                             <figcaption class="card__title">Spaghetti carbonara</figcaption>
-                            <h4 class="card__details">Price: <span class="important">22.5lei</span>
+                            <h4 class="card__details">Price: <span class="important oldPrice">25lei</span> <span
+                                    class="important">22.5lei</span>
                             </h4>
                         </div>
                     </div>
 
 
-                    <button class="card__button">
+                    <button class="card__button offert" onclick="createModala('Spaghetti carbonara','22.5lei')">
                         <img src="./Resources/assets/Icon/next.svg" class="card__button__logo"></img>
                     </button>
                 </figure>
             </div>
 
+
+            <div id="modal">
+                <p id="modal__close" onclick="closeModal()">X</p>
+                <h4>Close in: <span id="modal__time">1:00</span></h4>
+                <img src="./Resources/assets/Images/qr-code.png" alt="QR - offert">
+                <h2 id="modal__title"></h2>
+                <h4>New price: <span class="important" id="modal__price"></span></h4>
+
+            </div>
         </div>
     </div>
     </div>
+
+
 
 </body>
 

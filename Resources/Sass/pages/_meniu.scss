@@ -10,22 +10,26 @@
 
     .title {
       margin-right: auto;
-      font-size: 35px;
-
+      font-size: 55px;
+      @include slide-in-left(0s);
       @include tablet {
         margin: auto;
-        padding-left: 5em;
-        font-size: 40px;
+
+        font-size: 75px;
       }
       @include laptop {
-        font-size: 55px;
+        font-size: 90px;
         padding-left: 0;
       }
 
       &__image {
-        width: 150px;
+        @include slide-in-left(0.5s);
+        width: 100px;
         margin-left: 25px;
         padding-right: 1em;
+        @include tablet {
+          width: 150px;
+        }
       }
     }
   }
@@ -36,18 +40,26 @@
   text-align: center;
   display: flex;
   justify-content: center;
+
   .card__food {
     width: 80vw;
     margin: 1em;
+    position: relative;
+
+    @for $i from 1 through 7 {
+      &:nth-child(#{$i}) {
+        @include slide-in-left(#{(5 - $i) * 0.15}s);
+      }
+    }
 
     @include tablet {
-      width: 30vw;
+      width: 40vw;
       height: 250px;
     }
 
     @include laptop {
-      width: 17.5vw;
-      height: 360px;
+      width: 20vw;
+      height: 450px;
     }
     .card__title {
       @include laptop {
@@ -61,6 +73,11 @@
       object-fit: contain;
       @include laptop {
         width: 200px;
+      }
+      &--forBigPicture {
+        @include laptop {
+          width: 150px;
+        }
       }
 
       &--height {
@@ -79,14 +96,17 @@
       @include laptop {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        height: 100%;
       }
     }
     .card__subtitle {
       font-size: 12px;
       width: 100px;
+      color: $orange;
+
       @include laptop {
-        font-size: 120%;
+        font-size: 15px;
         width: 16vw;
       }
     }
@@ -94,6 +114,23 @@
       display: none;
       @include laptop {
         margin-bottom: -8em;
+      }
+    }
+    .card__details {
+      position: absolute;
+      bottom: 5px;
+      font-size: 15px;
+
+      @include tablet {
+        bottom: 15px;
+        font-size: 20px;
+      }
+      .important {
+        font-size: 12.5px;
+
+        @include tablet {
+          font-size: 22.5px;
+        }
       }
     }
   }
@@ -104,8 +141,4 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
-  @include laptop {
-    justify-content: flex-start;
-  }
 }
