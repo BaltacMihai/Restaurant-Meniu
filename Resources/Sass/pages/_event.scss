@@ -8,38 +8,58 @@
     .title {
       margin-left: auto;
       font-size: 55px;
-      @include slide-in-left(0s);
+      @include slide-in-bottom(0s);
       @include tablet {
         margin: auto;
         font-size: 75px;
       }
       @include laptop {
         font-size: 90px;
+        @include slide-in-left(0s);
       }
 
       &__image {
-        @include slide-in-left(0s);
         width: 150px;
         margin-left: 25px;
         padding-right: 1em;
+        @include slide-in-bottom(0.15s);
+        @include laptop {
+          @include slide-in-left(0s);
+        }
       }
     }
   }
 
   .card {
     &:nth-child(1) {
-      @include slide-in-left(1s);
+      @include slide-in-bottom(0.5s);
     }
     &:nth-child(2) {
-      @include slide-in-left(0.5s);
+      @include slide-in-bottom(0.75s);
     }
 
     &:nth-child(3) {
-      @include slide-in-left(1.25s);
+      @include slide-in-bottom(1s);
     }
 
     &:nth-child(4) {
-      @include slide-in-left(0.75s);
+      @include slide-in-bottom(1.25s);
+    }
+    @include laptop {
+      &:nth-child(1) {
+        @include slide-in-left(1s);
+      }
+      &:nth-child(2) {
+        @include slide-in-left(0.5s);
+      }
+
+      &:nth-child(3) {
+        @include slide-in-left(1.25s);
+      }
+
+      &:nth-child(4) {
+        @include slide-in-left(0.75s);
+      }
     }
 
     &__event {

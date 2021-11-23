@@ -6,7 +6,7 @@
 
   .row {
     @include tablet {
-      width: 100%;
+      width: 100vw;
       justify-content: space-evenly;
     }
     @include laptop {
@@ -16,7 +16,7 @@
     .title {
       display: flex;
       align-items: center;
-      @include slide-in-left(0s);
+      @include slide-in-bottom(0s);
       font-size: 35px;
 
       justify-content: space-around;
@@ -28,13 +28,17 @@
         margin: 0 auto;
         padding-left: 10vw;
         font-size: 90px;
+        @include slide-in-left(0s);
       }
 
       &__image {
         width: 150px;
-        @include slide-in-right(0s);
+        @include slide-in-bottom(0.25s);
         @include tablet {
           width: 200px;
+        }
+        @include laptop {
+          @include slide-in-right(0.25s);
         }
       }
     }
@@ -52,13 +56,14 @@
     padding-top: 1em;
     width: 90vw;
     object-fit: contain;
-    @include slide-in-left(1s);
+    @include slide-in-bottom(0.5s);
     @include tablet {
       width: 75vw;
     }
     @include laptop {
       width: 45vw;
       float: left;
+      @include slide-in-right(0.5s);
     }
 
     @include laptop {
@@ -69,7 +74,8 @@
   &__info {
     padding-top: 1em;
     padding-bottom: 20%;
-    @include slide-in-left(1.5s);
+    @include slide-in-bottom(0.75s);
+
     width: 90vw;
 
     @include tablet {
@@ -78,6 +84,7 @@
 
     @include laptop {
       width: 45vw;
+      @include slide-in-left(0.75s);
     }
 
     @include laptop {
