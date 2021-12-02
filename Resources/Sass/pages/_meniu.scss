@@ -1,5 +1,9 @@
 .container__meniu {
+  @include slide-in-bottom(0s);
+
   @include laptop {
+    @include slide-in-left(0s);
+
     padding-left: 5em;
   }
 
@@ -12,8 +16,6 @@
       margin-right: auto;
       font-size: 55px;
 
-      @include slide-in-bottom(0s);
-
       @include tablet {
         margin: auto;
 
@@ -22,21 +24,14 @@
       @include laptop {
         font-size: 90px;
         padding-left: 0;
-        @include slide-in-left(0s);
       }
 
       &__image {
-        @include slide-in-bottom(0.15s);
-
         width: 100px;
         margin-left: 25px;
         padding-right: 1em;
         @include tablet {
           width: 150px;
-        }
-
-        @include laptop {
-          @include slide-in-left(0.5s);
         }
       }
     }
@@ -54,12 +49,6 @@
     margin: 1em;
     position: relative;
 
-    @for $i from 1 through 7 {
-      &:nth-child(#{$i}) {
-        @include slide-in-bottom(#{$i * 0.25}s);
-      }
-    }
-
     @include tablet {
       width: 40vw;
       height: 250px;
@@ -68,12 +57,6 @@
     @include laptop {
       width: 20vw;
       height: 450px;
-
-      @for $i from 1 through 7 {
-        &:nth-child(#{$i}) {
-          @include slide-in-left(#{(5 - $i) * 0.15}s);
-        }
-      }
     }
     .card__title {
       @include laptop {

@@ -1,12 +1,16 @@
 .container__about {
+  @include slide-in-bottom(0s);
+  margin-bottom: 20vh;
+  overflow-x: hidden;
   @include laptop {
     margin-left: 5vw;
+    @include slide-in-left(0s);
   }
+
   .row {
     align-items: center;
     .title {
       font-size: 35px;
-      @include slide-in-bottom(0s);
       @include tablet {
         font-size: 75px;
         margin: 0 auto;
@@ -14,16 +18,11 @@
 
       @include laptop {
         font-size: 90px;
-        @include slide-in-left(0s);
       }
       &__image {
         width: 125px;
-        @include slide-in-bottom(0.5s);
         @include tablet {
           width: 200px;
-        }
-        @include laptop {
-          @include slide-in-left(0.5s);
         }
       }
     }
@@ -31,34 +30,14 @@
   .about__text {
     padding: 1em;
 
-    &:nth-child(2) {
-      @include slide-in-bottom(1.25s);
-    }
-    &:nth-child(3) {
-      @include slide-in-bottom(1.5s);
-    }
-    &:nth-child(4) {
-      @include slide-in-bottom(1.75s);
-    }
     font-size: 12.5px;
     text-align: justify;
 
     @include tablet {
       font-size: 20px;
     }
-    @include laptop {
-      &:nth-child(2) {
-        @include slide-in-left(1.25s);
-      }
-      &:nth-child(3) {
-        @include slide-in-left(1.5s);
-      }
-      &:nth-child(4) {
-        @include slide-in-left(1.75s);
-      }
-    }
+
     .important {
-      @include slide-in-bottom(1.25s);
       font-size: 17.5px;
       @include tablet {
         font-size: 25px;
