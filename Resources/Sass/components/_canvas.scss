@@ -1,9 +1,9 @@
 .canvas {
   display: none;
 
-  position: absolute;
-  left: 10%;
-  z-index: -1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 
   @include laptop {
     display: block;
