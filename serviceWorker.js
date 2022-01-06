@@ -1,5 +1,5 @@
 const cacheBuilder = {
-  name: "version 1.0.0",
+  version: "version 1.0.0",
   assets: [
     "index.html",
     "event.html",
@@ -17,7 +17,7 @@ self.addEventListener("fetch", (e) => {
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches
-      .open(cacheBuilder.name)
+      .open(cacheBuilder.version)
       .then((cache) => {
         cache.addAll(cacheBuilder.assets).catch((er) => console.log(er));
       })
@@ -27,10 +27,10 @@ self.addEventListener("install", (e) => {
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then((cacheNames) => {
+    caches.keys().then((version) => {
       return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== cacheBuilder.name) {
+        version.map((cache) => {
+          if (cache !== cacheBuilder.version) {
             return caches.delete(cache);
           }
         })
